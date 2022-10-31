@@ -1,18 +1,22 @@
 import React from 'react'
-import { Container, Wrapper, Logo, Search, Basket } from './style'
+import { Container, Wrapper, Logo, Search, Basket, Logout, WrapperBasket, Counter, Rectangle } from './style'
 
 export const Navbar = () => {
   return (
     <Container>
         <Logo />
         <Wrapper>
-            <h1>home</h1>
-            <h1>shop</h1>
+            <Wrapper.Title>Home</Wrapper.Title>
+            <Wrapper.Title>Shop</Wrapper.Title>
         </Wrapper>
         <Wrapper>
             <Search />
-            <Basket />
-            <button>login</button>
+            <WrapperBasket>
+              <Basket />
+              <Counter>6</Counter>
+            </WrapperBasket>
+            <Wrapper.Button><Logout />Login</Wrapper.Button>
+            <Rectangle></Rectangle>
         </Wrapper>  
     </Container>
   )
