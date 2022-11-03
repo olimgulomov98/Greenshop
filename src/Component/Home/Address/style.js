@@ -12,6 +12,8 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-top: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
 
     @media (max-width: 430px) {
         display: grid;

@@ -1,15 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Button, Container, Header, Paragraph, Paragraph1, PlantBig, Section, Slides, SmallBig, Title } from './style'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
-const data = [
-    {id: 1, title: 'Welcome to GreenShop', header: 'Let’s Make a Better', planet: 'Planet', paragraph: 'We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!'},
-    {id: 2, title: 'Welcome to GreenShop', header: 'Let’s Make a Better', planet: 'Planet', paragraph: 'We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!'},
-    {id: 3, title: 'Welcome to GreenShop', header: 'Let’s Make a Better', planet: 'Planet', paragraph: 'We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!'}
-]
+import { PlantContext } from '../../../Context/Plants';
+
+
 export const Swipers = () => {
+    const [state, dispatch] = useContext(PlantContext)
   return (
     <Container>
         <Swiper 
@@ -21,7 +20,7 @@ export const Swipers = () => {
             modules={[Autoplay, Pagination]} 
             className="mySwiper">
                 {
-                    data.map(({id, title, header, planet, paragraph}) => {
+                    state.swiperData.map(({id, title, header, planet, paragraph}) => {
                         return(
                             <SwiperSlide key={id}>
                                 <Slides>

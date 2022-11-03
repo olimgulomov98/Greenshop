@@ -23,7 +23,7 @@ Container.Wrapper = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 44px;
 
-    @media (max-width: 835px) {
+    @media (max-width: 900px) {
         grid-template-columns: repeat(2, 1fr);
         place-items: center;
     }
@@ -37,7 +37,6 @@ export const Card = styled.div`
     width: 268px;
     height: 350px;
     background: #FBFBFB;
-    /* border: 2px solid; */
 `
 Card.Title = styled.h3`
     font-weight: 500;

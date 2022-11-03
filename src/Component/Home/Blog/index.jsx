@@ -1,16 +1,17 @@
-import React from 'react'
-import { data } from './data'
+import React, { useContext } from 'react'
+import { PlantContext } from '../../../Context/Plants'
 import { Card, Container } from './style'
 
 
 export const Blog = () => {
+    const [state, dispatch] = useContext(PlantContext)
   return (
     <Container>
         <Container.Title>Our Blog Posts</Container.Title>
         <Container.Paragraph>We are an online plant shop offering a wide range of cheap and trendy plants.</Container.Paragraph>
         <Container.Wrapper>
             {
-                data.map(({id, img, title, header, paragraph}) => {
+                state.blogData.map(({id, img, title, header, paragraph}) => {
                     return(
                         <Card key={id}>
                             <img src={img} alt="Plant1" />

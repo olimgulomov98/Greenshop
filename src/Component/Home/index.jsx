@@ -9,7 +9,7 @@ export const Home = () => {
     <Container>
         <Swipers />
         <Blog />
-        <Address />
+        <Address />   
     </Container>
   )
 }

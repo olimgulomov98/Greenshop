@@ -54,7 +54,6 @@ export const Wrapper = styled.div`
 `
 Wrapper.Title = styled.h1`
     font-weight: 400;
-    color: var(--dark-black);
     ${font}
 `
 Wrapper.Button = styled.button`
@@ -90,7 +89,6 @@ export const Counter = styled.p`
 
 `
 export const Selected = styled.select`
-    /* background-color: yellow; */
     background-image: url(Rectangles);
     border: none;
     outline: none;
